@@ -6,7 +6,7 @@ from pyspark.sql.functions import *
 
 python_path = sys.executable
 os.environ['PYSPARK_PYTHON'] = python_path
-os.environ['JAVA_HOME'] = r'C:\Users\Quantumn\.jdks\corretto-1.8.0_462'
+os.environ['JAVA_HOME'] = r'C:\Users\pc\.jdks\corretto-1.8.0_462'
 
 
 conf = SparkConf().setAppName("pyspark").setMaster("local[*]").set("spark.driver.host","localhost").set("spark.default.parallelism", "1")
