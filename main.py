@@ -28,7 +28,7 @@ df1.show()
 
 fdf = (df1.groupBy("pos").pivot("columns").agg(first("value")).drop("pos") # Group by index nos. (pos) and pivot will convert the selected column values into actual columns
        .selectExpr("Worker_ID","Name","Department","Salary")
-       .na.replace("",None) # Replace empty values with NULL
+       .na.replace("",None) # Replace strings with NULL
        )
 fdf.show()
 
